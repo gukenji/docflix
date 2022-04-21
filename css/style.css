@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Amatic+SC:wght@700&display=swap');
+
+:root {
+    --bs-red: #dc3545;
+    --bs-gray-900: #212529;
+    --logo-font: 'Amatic SC', cursive;
+    font-size: 14px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bs-gray-900);
+    margin: 0;
+    font-family: Arial;
+    font-size: 12px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* TOP */
+div .top-container {
+    display: flex;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, 0.1));
+    position: fixed;
+    width: 100%;
+    height: min(80px, 10vw);
+    padding: 0 4%;
+    align-items: center;
+    z-index: 999;
+
+}
+
+div .top-container.scrolled {
+    background-color: rgba(0, 0, 0, 1) !important;
+    transition: background-color 200ms linear;
+}
+
+.logo {
+    margin-right: 15px;
+}
+
+.logo h2 {
+    font-family: var(--logo-font);
+    color: var(--bs-red);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    height: 100%;
+    margin: 0;
+    margin-right: 5px;
+    letter-spacing: 0.3rem;
+}
+
+.logo h2:hover {
+    text-shadow: 1px 1px 2px white;
+}
+
+.canvas .top-container .left-side,
+.canvas .top-container .right-side {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    height: 100%;
+}
+
+.canvas .top-container .right-side {
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+div>div>.material-icons {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.profile-icon {
+    border-radius: 50%;
+    width: clamp(25px, 2vw, 45px);
+    height: clamp(25px, 2vw, 45px);
+}
+
+
+
+.nav-link {
+    color: white;
+    padding: 0 3px;
+    font-size: clamp(.5rem, 1vw, 1rem);
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--bs-red);
+}
+
+
+/* MAIN SPOTLIGHT */
+.spotlight {
+    height: 50.4vw;
+    background-image: url(/img/citizen-four.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlight .spotlight-text,
+.spotlight .spotlight-buttons {
+    padding: 0 4%;
+}
+
+.spotlight .spotlight-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 15px;
+
+}
+
+.spotlight .spotlight-buttons div {
+    border-radius: 5px;
+    padding: 3px 20px;
+    height: max(10px, 4vh);
+}
+
+.spotlight .spotlight-buttons .material-icons {
+    font-size: max(10px, 1.5vw + 1.5vw);
+    padding-right: 5px;
+
+}
+
+.spotlight .spotlight-buttons .more-infos>.material-icons {
+    font-size: max(10px, 1vw + 1vw);
+}
+
+
+.spotlight .spotlight-buttons button {
+    border-radius: 5px;
+    height: max(2vh + 1.8vw, 20px);
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    font-size: clamp(.3rem, 1vw, 3rem);
+}
+
+.spotlight .spotlight-buttons button.play {
+    background: white;
+    color: black;
+    display: flex;
+    width: max(10%, 80px);
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.spotlight .spotlight-buttons button.more-infos {
+    background: rgba(102, 102, 102, 0.4);
+    color: white;
+    display: flex;
+    max-width: 270px;
+    width: max(20%, 100px);
+}
+
+.spotlight .spotlight-buttons button.more-infos>span {
+    padding-right: 10px;
+    justify-self: flex-start;
+}
+
+.spotlight .spotlight-buttons button.play:hover,
+.spotlight .spotlight-buttons button.more-infos:hover {
+    opacity: 0.8;
+}
+
+
+.spotlight .spotlight-text p {
+    font-size: clamp(0.3rem, 0.8vh + 1vw, 1.5rem);
+    font-family: 'Akshar', sans-serif;
+    gap: 30px;
+}
+
+.spotlight .spotlight-text p>span {
+    font-family: var(--logo-font);
+    color: var(--bs-red);
+    font-size: clamp(.4em, 0.8vh + 1.8vw, 2rem);
+    margin-right: 5px;
+}
+
+
+/* MAIN CARROSSEL */
+main .main-content .catalogue {
+    position: relative;
+    top: 3%;
+    padding: 0 4%;
+}
+
+main .main-content .catalogue .carousel {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+}
+
+.top-container .left-side a:last-child {
+    display: none;
+}
+
+@media screen and (min-width:950px) {
+
+    .canvas .top-container .left-side {
+        padding-top: 18px;
+    }
+
+    .nav-link {
+        padding: 0 7px;
+    }
+
+    .canvas .top-container .right-side {
+        gap: 20px;
+        padding-top: 18px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .top-container .left-side a {
+        display: none;
+    }
+
+    .top-container .left-side a:last-child {
+        display: flex;
+    }
+
+    .top-container .left-side .nav-link {
+        font-size: clamp(.7rem, 1vw, 1.5rem);
+    }
+
+    #dropdown-icon {
+        font-size: clamp(.7rem, 1vw, 1.5rem);
+        align-self: flex-end;
+    }
+
+}
