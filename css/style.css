@@ -27,6 +27,9 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
 
 /* TOP */
 div .top-container {
@@ -197,23 +200,116 @@ div>div>.material-icons {
 
 
 /* MAIN CARROSSEL */
-main .main-content .catalogue {
+.catalogue {
     position: relative;
-    top: 3%;
-    padding: 0 4%;
+    bottom: min(500px, 13vw);
 }
 
-main .main-content .catalogue .carousel {
+.carousel__row {
     display: flex;
-    gap: 3px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    height: min(500px, 13vw);
     flex-wrap: nowrap;
+}
+
+
+.carousel__nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    right: 3%;
+    position: absolute;
+    bottom: max(10px, 15vw);
+
+}
+
+.carousel__indicator {
+    width: 3vw;
+    height: 0.5vw;
+    background: rgba(0, 0, 0, .3);
+    margin-right: 10px;
+    border-color: rgba(211, 211, 211, 0.2);
+    border-width: min(1px, 0.1vw);
+}
+.carousel__movies-container{
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 4%;
+}
+
+.carousel__movies {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.transition {
+    transition: transform 250ms ease-in;
+}
+
+.no-transition {
+    transition: none;
+}
+
+.carousel__slide {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    gap: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+.carousel__button {
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3vw;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+button>.material-symbols-outlined {
+    font-weight: bold;
+    font-size: clamp(.3rem, 3vw , 3rem);
 }
 
 .top-container .left-side a:last-child {
     display: none;
 }
 
+.carousel__button--right {
+    right: 0;
+}
+
+.carousel__button--left {
+    left: 0;
+}
+
+.carousel__picture img {
+    height: 100%;
+    width: 25vw;
+    object-fit: cover;
+
+}
+
+.carousel__indicator.active-slide {
+    background-color: var(--bs-red);
+}
+
+
+
+
+/* MEDIA QUERIES */
 @media screen and (min-width:950px) {
 
     .canvas .top-container .left-side {
