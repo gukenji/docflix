@@ -111,7 +111,7 @@ div>div>.material-icons {
 /* MAIN SPOTLIGHT */
 .spotlight {
     height: 50.4vw;
-    background-image: url(img/citizen-four.jpg);
+    background-image: url(../img/citizen-four.jpg);
     background-size: cover;
     position: relative;
     display: flex;
