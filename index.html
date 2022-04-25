@@ -27,12 +27,24 @@
                     </a>
                 </div>
                 <div class="left-side">
-                    <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    <a class="nav-link bold" aria-current="page" href="#">Início</a>
                     <a class="nav-link" href="#">Nacionais</a>
                     <a class="nav-link" href="#">Internacionais</a>
                     <a class="nav-link" href="#">Minha lista</a>
-                    <a class="nav-link" href="#" id="navegar">Navegar<span class="material-symbols-outlined"
+                    <div class="dropdown" data-dropdown>
+                        <a class="nav-link" href="#" id="navegar" data-dropdown-button>Navegar<span class="material-symbols-outlined"
                             id="dropdown-icon">expand_more</span></a>
+                        <div class="dropdown__menu">
+                            <ul>
+                                <li>INÍCIO</li>
+                                <li>NACIONAIS</li>
+                                <li>INTERNACIONAIS</li>
+                                <li>MINHA LISTA</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
                 </div>
                 <div class="right-side">
                     <div class="searchBox">
@@ -45,10 +57,27 @@
                             notifications
                         </span>
                     </div>
-                    <div class="profile-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/profile.jpg" alt=""
-                                width="32px" height="32px" class="profile-icon"></a>
+                    <div class="dropdown" data-dropdown>
+                        <a href="#" class="" ><img src="img/profile.jpg" alt=""
+                            width="32px" height="32px" class="profile-icon" data-dropdown-button></a>
+                        <div class="dropdown__menu">
+                            <div class="usuarios">
+                                <ul>
+                                    <li>Gustavo</li>
+                                    <li>Walter</li>
+                                    <li>Marcelo</li>
+                                    <li>Daniel</li>
+                                    <li>Zó</li>
+                                </ul>
+                            </div>
+                            <div class="config">
+                                <ul>
+                                    <li>Conta</li>
+                                    <li>Centro de Ajuda</li>
+                                </ul>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>

@@ -31,6 +31,10 @@ ul {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* TOP */
 div .top-container {
     display: flex;
@@ -44,9 +48,14 @@ div .top-container {
 
 }
 
+
 div .top-container.scrolled {
     background-color: rgba(0, 0, 0, 1) !important;
     transition: background-color 200ms linear;
+}
+
+.top-container .left-side .dropdown {
+    display: none;
 }
 
 .logo {
@@ -92,19 +101,78 @@ div>div>.material-icons {
 }
 
 
-
 .nav-link {
     color: white;
     padding: 0 3px;
     font-size: clamp(.5rem, 1vw, 1rem);
 }
 
-.nav-link.active {
+.nav-link.bold {
     font-weight: bold;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: var(--bs-red);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__menu {
+    position: absolute;
+    top: calc(100% + 0.5vw);
+    width: calc(100% + 10em);
+    right: 20%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 0 1vw;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out; 
+    font-size: clamp(.5rem, 1vw, 1rem);
+}
+
+
+
+
+.dropdown__menu ul li {
+    padding: 0.5vw 0;
+    cursor: pointer;
+}
+
+
+.usuarios ul li:hover,
+.config ul li:hover {
+    color:var(--bs-red);
+}
+
+.config {
+    border-top: 0.3px solid white;
+}
+
+.dropdown > #navegar + .dropdown__menu {
+    padding: 0;
+}
+
+.dropdown > #navegar + .dropdown__menu ul li{
+    padding: 2vw 0;
+    text-align: center;
+}
+
+.dropdown > #navegar + .dropdown__menu ul li:hover{
+    background: rgba(0, 0, 0, 1);
+}
+
+
+
+.dropdown.active > a + .dropdown__menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 
@@ -283,9 +351,7 @@ button>.material-symbols-outlined {
     font-size: clamp(.3rem, 3vw , 3rem);
 }
 
-.top-container .left-side a:last-child {
-    display: none;
-}
+
 
 .carousel__button--right {
     right: 0;
@@ -330,21 +396,25 @@ button>.material-symbols-outlined {
 }
 
 @media screen and (max-width: 600px) {
-    .top-container .left-side a {
+    .top-container .left-side > .nav-link {
         display: none;
     }
 
-    .top-container .left-side a:last-child {
+    .top-container .left-side .dropdown {
         display: flex;
     }
 
-    .top-container .left-side .nav-link {
+    .top-container .left-side .dropdown .nav-link {
         font-size: clamp(.7rem, 1vw, 1.5rem);
     }
 
     #dropdown-icon {
         font-size: clamp(.7rem, 1vw, 1.5rem);
-        align-self: flex-end;
+        align-self: center;
+    }
+
+    #navegar {
+        display: flex;
     }
 
 }
