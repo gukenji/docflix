@@ -138,6 +138,9 @@ body {
     margin-left: calc(5vw - 4%);
 
 }
+.formulario-login form label > p:hover {
+   z-index: -3;
+}
 
 .formulario-login form label {
     padding: 4% 4%;
