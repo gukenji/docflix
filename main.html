@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>DocFlix</title>
+</head>
+
+
+<body>
+    <div class="canvas">
+        <header>
+            <div class="top-container">
+                <div class="logo">
+                    <a href="#">
+                        <h2>DocFlix</h2>
+                    </a>
+                </div>
+                <div class="left-side">
+                    <a class="nav-link bold" aria-current="page" href="#">Início</a>
+                    <a class="nav-link" href="#">Nacionais</a>
+                    <a class="nav-link" href="#">Internacionais</a>
+                    <a class="nav-link" href="#">Minha lista</a>
+                    <div class="dropdown" data-dropdown>
+                        <a class="nav-link" href="#" id="navegar" data-dropdown-button>Navegar<span
+                                class="material-symbols-outlined" id="dropdown-icon">expand_more</span></a>
+                        <div class="dropdown__menu">
+                            <ul>
+                                <li>INÍCIO</li>
+                                <li>NACIONAIS</li>
+                                <li>INTERNACIONAIS</li>
+                                <li>MINHA LISTA</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="right-side">
+                    <div class="searchBox">
+                        <form action="">
+                            <input type="search" name="search" class="search-input animate-input" placeholder="Buscar">
+                            <button class="search"> <span class="material-icons">
+                                    search
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="bell">
+                        <span class="material-icons">
+                            notifications
+                        </span>
+                    </div>
+                    <div class="dropdown" data-dropdown>
+                        <a href="#" class=""><img src="img/profile.jpg" alt="" width="32px" height="32px"
+                                class="profile-icon" data-dropdown-button></a>
+                        <div class="dropdown__menu">
+                            <div class="usuarios">
+                                <ul>
+                                    <li>Gustavo</li>
+                                    <li>Walter</li>
+                                    <li>Marcelo</li>
+                                    <li>Daniel</li>
+                                    <li>Zó</li>
+                                </ul>
+                            </div>
+                            <div class="config">
+                                <ul>
+                                    <li>Conta</li>
+                                    <li>Centro de Ajuda</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-content">
+                <div class="spotlight">
+                    <div class="spotlight-text">
+                        <p><span id="letter-logo">D</span>DOCUMENTARY</p>
+                        <p>CITIZEN FOUR</p>
+                    </div>
+
+                    <div class="spotlight-buttons">
+                        <button class="play">
+                            <span class="material-icons">
+                                play_arrow
+                            </span>Assistir
+                        </button>
+                        <button class="more-infos">
+                            <span class="material-icons">
+                                info
+                            </span>Mais informações
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="catalogue">
+                    <div class="carousel__row">
+                        <div class="carousel__nav">
+                            <button class="carousel__indicator active-slide"></button>
+                            <button class="carousel__indicator"></button>
+                            <button class="carousel__indicator"></button>
+                            <button class="carousel__indicator"></button>
+                        </div>
+                        <button class="carousel__button carousel__button--left hidden"><span
+                                class="material-symbols-outlined">
+                                chevron_left
+                            </span></button>
+                        <div class="carousel__movies-container">
+                            <div class="carousel__movies transition">
+                                <ul class="carousel__slide active-slide">
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-1.jpg" alt="movie 1">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-2.jpg" alt="movie 2">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-3.jpg" alt="movie 3">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-4.jpg" alt="movie 4">
+                                    </li>
+                                </ul>
+                                <ul class="carousel__slide">
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-5.jpg" alt="movie 5">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-6.jpg" alt="movie 6">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-7.jpg" alt="movie 7">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-8.jpg" alt="movie 8">
+                                    </li>
+                                </ul>
+                                <ul class="carousel__slide">
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-9.jpg" alt="movie 9">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-10.png" alt="movie 10">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-11.jpg" alt="movie 11">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-12.jpg" alt="movie 12">
+                                    </li>
+                                </ul>
+                                <ul class="carousel__slide">
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-13.jpg" alt="movie 13">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-14.jpg" alt="movie 14">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-15.jpg" alt="movie 15">
+                                    </li>
+                                    <li class="carousel__picture">
+                                        <img src="img/movie-16.jpg" alt="movie 16">
+                                    </li>
+                                </ul>
+                                </span></button>
+                            </div>
+                        </div>
+                        <button class="carousel__button carousel__button--right"><span
+                                class="material-symbols-outlined">
+                                chevron_right
+
+                    </div>
+                </div>
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
